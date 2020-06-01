@@ -1,0 +1,15 @@
+.rect {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.rect-green {
+    background-color: #0b2e13;
+}
+
+.rect-blue {
+    background-color: blue;
+    position: fixed;
+    top: 10px;
+}

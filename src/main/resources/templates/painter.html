@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Painters</title>
+    <script src="js/axios.js"></script>
+    <script src="js/painter-utils.js"></script>
+    <script src="js/painter-main.js"></script>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/spinkit.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/painter-main.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+<div class="full-screen-overlay"></div>
+<div class="buttons-bar">
+    <button class="create-painter btn btn-primary">add painter</button>
+    <button class="refresh-painters btn btn-primary">refresh</button>
+</div>
+<div class="painter-table">
+    <div class="painter-table-header">
+        <div class="table-th painter-name-column-name">name</div>
+        <div class="table-th painter-studio-column-name">studio</div>
+        <div class="table-th painter-paintings-column-name">paintings</div>
+        <div class="table-th painter-gallery-column-name">gallery</div>
+        <div class="table-th painter-action-buttons-column-name">actions</div>
+    </div>
+    <div class="table-content"></div>
+</div>
+
+<template id="template-painter">
+    <div class="table-content-painter">
+        <div class="table-td painter-name"></div>
+        <div class="table-td painter-studio"></div>
+        <div class="table-td painter-paintings"></div>
+        <div class="table-td painter-gallery"></div>
+        <div class="table-td painter-action-buttons">
+            <button class="painter-edit-btn btn btn-warning">
+                <i class="fa fa-pencil-square-o"></i>
+            </button>
+            <button class="painter-delete-btn btn btn-danger">
+                <i class="fa fa-trash-o"></i>
+            </button>
+        </div>
+    </div>
+</template>
+
+<div class="edit-painter-wrapper">
+    <div class="edit-painter-inner-wrapper">
+        <div class="edit-painter">
+            <div class="edit-field">
+                <input type="text" class="edit-painter-name">
+            </div>
+            <div class="edit-field edit-field-studio" style="position: relative">
+                <div class="edit-painter-studio-name"></div>
+                <div class="studios-dropdown-wrapper">
+                    <div class="studios-dropdown"></div>
+                </div>
+            </div>
+            <div class="edit-field">
+                <input disabled class="edit-painter-paintings">
+            </div>
+            <div class="edit-field edit-field-gallery" style="position: relative">
+                <div class="edit-painter-gallery-name"></div>
+                <div class="galleries-dropdown-wrapper">
+                    <div class="galleries-dropdown"></div>
+                </div>
+            </div>
+            <div class="edit-field edit-field-actions">
+                <button class="edit-painter-save-btn btn btn-warning">
+                    <i class="fa fa-save"></i>
+                </button>
+                <button class="edit-painter-cancel-btn btn btn-secondary">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

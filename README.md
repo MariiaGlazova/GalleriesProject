@@ -5,7 +5,7 @@
 # MARKUP PART 
 файлы json хранятся в папке resouces
 # FE-PART
-                   А        . Были изменены связи между сущностями, чтобы избежать circle references.
+                             А. Были изменены связи между сущностями, чтобы избежать circle references.
 • Gallery(int id, String name, String city) - галлерея, в которой могут выставляться несколько художников.
 
 • Painter(int id, String name, Studio studio, List<Painting> paintings, Gallery gallery) - художник, в котором находится информация о картинах, галлереях, студии и проч
